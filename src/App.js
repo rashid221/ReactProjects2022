@@ -1,23 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+
 
 function App() {
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reactapp
-        </a>
-      </header>
+<h1 style={{color:'white',backgroundColor:'black',boxShadow:'0px 0px 4px black',letterSpacing:'24px',padding:'20px',textShadow:'0px 0px 4px white',textTransform:'uppercase'}}>Thor the dark world</h1>
+    <h4 style={{textShadow:'0px 0px 4px white'}}>Based on scifie technology and thunder events around the universe</h4>
     </div>
   );
 }
