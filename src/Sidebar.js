@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types'
+
 
 function Sidebar(props){
     return(<>
@@ -8,3 +10,12 @@ function Sidebar(props){
     </>)
 }
 export default Sidebar;
+Sidebar.propTypes = {
+    name: PropTypes.string.isRequired,
+    side:PropTypes.string
+}      
+// Sidebar.defaultProps = {
+//     name: 'set name here',
+//     side: 'left side here'
+
+// }

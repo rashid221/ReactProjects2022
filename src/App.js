@@ -1,41 +1,89 @@
-import React, { useState } from "react";
-import Sidebar from "./Sidebar";
+import React from "react";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import News from "./News";
 
 function App() {
+  let apikey = process.env.REACT_APP_NEWS_API
   return (
-    <div
-      style={{
-        backgroundColor: "black",
-        color: "white",
-        width: "100%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Sidebar name="1" />
-      <div className="App">
-        <h1
-          style={{
-            color: "white",
-            backgroundColor: "black",
-            boxShadow: "0px 0px 4px black",
-            letterSpacing: "24px",
-            padding: "20px",
-            textShadow: "0px 0px 4px white",
-            textTransform: "uppercase",
-          }}
-        >
-          thor the dark world{" "}
-        </h1>
-        <h4 style={{ textShadow: "0px 0px 4px white" }}>
-          Based on sci-fie technology and thunder events around the universe
-        </h4>
-      </div>
-      <Sidebar side="sahil" />
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <News
+              key="general"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="general"
+            />
+          </Route>
+          <Route exact path="/business">
+            <News
+              key="business"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="business"
+            />
+          </Route>
+          <Route exact path="/entertainment">
+            <News
+              key="entertainment"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="entertainment"
+            />
+          </Route>
+          <Route exact path="/general">
+            <News
+              key="general"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="general"
+            />
+          </Route>
+          <Route exact path="/health">
+            <News
+              key="health"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="health"
+            />
+          </Route>
+          <Route exact path="/science">
+            <News
+              key="science"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="science"
+            />
+          </Route>
+          <Route exact path="/sports">
+            <News
+              key="sports"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="sports"
+            />
+          </Route>
+          <Route exact path="/technology">
+            <News
+              key="technology"
+              apikey={apikey}
+              pageSize={5}
+              country="in"
+              category="technology"
+            />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
-
 export default App;
